@@ -4,6 +4,9 @@
 
   const form = document.querySelector(".top-banner form")
   form.addEventListener("submit", e => {
+    document.getElementById('containt2').innerHTML = "";
+    document.getElementById('containt3').innerHTML = "";
+
       e.preventDefault();
       console.log(e)
       const cityName = document.getElementsByTagName("input")[0].value
@@ -83,7 +86,7 @@
                             const containt3 = document.getElementById("containt3")
                             containt3.innerHTML += `
                             <section class="middle-banner">
-                                <div class="main2">
+                                <div type=class="main2">
                                 <p>${dateHour}</p>
                                     <div class = recap>
                                         <h2>Météo <br><span class="city"> ${cityName} </span> </h2>
@@ -100,7 +103,7 @@
                             </div>
                         </section>
                             `
-                  
+                    
                   })
                 }
               }
